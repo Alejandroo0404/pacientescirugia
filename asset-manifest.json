@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pacientescirugia/static/css/main.1a9c9d65.css",
+    "main.js": "/pacientescirugia/static/js/main.c3704328.js",
+    "static/js/787.cddea7c3.chunk.js": "/pacientescirugia/static/js/787.cddea7c3.chunk.js",
+    "index.html": "/pacientescirugia/index.html",
+    "main.1a9c9d65.css.map": "/pacientescirugia/static/css/main.1a9c9d65.css.map",
+    "main.c3704328.js.map": "/pacientescirugia/static/js/main.c3704328.js.map",
+    "787.cddea7c3.chunk.js.map": "/pacientescirugia/static/js/787.cddea7c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a9c9d65.css",
+    "static/js/main.c3704328.js"
+  ]
+}
