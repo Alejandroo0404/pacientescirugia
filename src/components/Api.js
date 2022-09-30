@@ -22,13 +22,12 @@ const Api = [{
     ingreso_sala: "5:30",
     preparado: "6:30",
     cirugia: "7:45",
-    recuperacion: "7:55",
-    salida: "8:20"
+    recuperacion: "7:55"
   },
   {
     nombre_paciente: "Claudia Camila",
-    ingreso_sala: "8:07"
-    
+    ingreso_sala: "7:07",
+    preparado: "8:58"
   },
   ,
   {
