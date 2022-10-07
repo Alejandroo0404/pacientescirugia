@@ -10,7 +10,7 @@ const CambioEstado = () => {
   const apiUserId = async (e) => {
     e.preventDefault();
     await axios
-      .get("http://127.0.0.1:8000/api/movimiento/" + userId)
+      .get("http://192.241.142.26:81/api/movimiento/" + userId)
       .then((response) => {
         
         let dataUser = response.data

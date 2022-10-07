@@ -35,7 +35,7 @@ const StatesUser = (props) => {
       hora_cambio_estado: `${fecha.getHours()}:${fecha.getMinutes()}`,
     };
 
-    await axios.post("http://127.0.0.1:8000/api/movimientocirugia", body);
+    await axios.post("http://192.241.142.26:81/api/movimientocirugia", body);
     
     if ("pendiente" === userStates) {
       setUserStates("reservado")

@@ -11,12 +11,11 @@ const PacientesCirugias = () => {
   //const [dataUsersStates, setDataUsersStates] = useState([]);
   let nuevo;
   let apiUsers = async () =>{
-    axios.get("http://127.0.0.1:8000/api/pacientescirugiafecha").then((response)=>{        
-        //console.log(response.data);
+    axios.get("http://192.241.142.26:81/api/pacientescirugiafecha").then((response)=>{        
+        
 
         nuevo = response.data
-        //setDataUsersStates(response.data)
-        //console.log(array)
+        
         
       })
   }
@@ -44,15 +43,13 @@ const PacientesCirugias = () => {
       ///Cada vez que el tiempo empiece en cero, es decir que pase un minuto, hace llamada a la api
       if(secondsTime === 20 || secondsTime === 50 || secondsTime === 0 || secondsTime === 55 || secondsTime === 57 || secondsTime === 59 || secondsTime === 58 ){
         apiUsers()
-        //console.log("hola")
+        
       }
       if (secondsTime === 0) {
-        //apiUsers()
-        //apiUsers()
-        //console.log(nuevo,"array")
+        
         setLoading(false);
         const subtractTimeUser = nuevo.map((users) => {
-          //let nameUser = users.nombre_paciente;
+          
           let nameUser;
           if(users['ingreso a sala']){
             nameUser = users.nombre_paciente;
