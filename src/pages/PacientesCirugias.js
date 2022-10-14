@@ -9,9 +9,10 @@ const PacientesCirugias = () => {
   const [currentTime, setCurrentTime] = useState("");
   const [loading, setLoading] = useState(true);
   //const [dataUsersStates, setDataUsersStates] = useState([]);
+  //http://192.241.142.26:81/api/pacientescirugiafecha
   let nuevo;
   let apiUsers = async () =>{
-    axios.get("http://192.241.142.26:81/api/pacientescirugiafecha").then((response)=>{        
+    axios.get("http://127.0.0.1:8000/api/movimiento").then((response)=>{        
         
 
         nuevo = response.data
@@ -61,6 +62,7 @@ const PacientesCirugias = () => {
           let recuperacionUser = "vacio";
           let colocarCronometro = "";
           let timer = "";
+          let salidaUser = "vacio"
           //restar los tiempos
           //console.log(users['ingreso a sala'], "holaaaaaaaa")
           if (users.preparado && users['ingreso a sala']) {
@@ -161,6 +163,7 @@ const PacientesCirugias = () => {
               totalMinutos = "0" + totalMinutos;
             }
             recuperacionUser = `${totalHoraString}:${totalMinutos}`;
+            salidaUser = "Traslado"
           }
           //timer por cada paciente en cirugia
           //console.log(ingresoSalaUser,"ingresoSalaUser")
@@ -295,6 +298,7 @@ const PacientesCirugias = () => {
             recuperacionUser: recuperacionUser,
             colocarCronometro: colocarCronometro,
             timer: timer,
+            salidaUser: salidaUser,
           };
         });
         //console.log(subtractTimeUser, "$$$$$$$$")
@@ -373,7 +377,7 @@ const PacientesCirugias = () => {
                 </tr>
               ) : (
                 statesUsers.map((item, index) => (
-                  <tr className="bg-white lg:text-black" key={index}>
+                  <tr className="bg-white text-black 2xl:text-2xl" key={index}>
                     <td className="p-3 font-medium capitalize">
                       {item.nameUser}
                     </td>
@@ -457,7 +461,11 @@ const PacientesCirugias = () => {
                       </td>
                     )}
 
-                    <td className="p-3 font-medium"></td>
+                    {
+                      item.salidaUser === "vacio" ? <td className="p-3 font-medium"></td>: <td className="p-3 font-medium">{item.salidaUser}</td>
+                    }
+
+                    {/* <td className="p-3 font-medium">hola</td> */}
                   </tr>
                 ))
               )}

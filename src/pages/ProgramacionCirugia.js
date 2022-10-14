@@ -4,7 +4,7 @@ const ProgramacionCirugia = () => {
       <div className=" text-2xl text-gray-900 font-medium pb-3">
         Programación de cirugías
       </div>
-      <div className="flex">
+      <div className="flex flex-wrap">
         <div className="mb-3 xl:w-96">
           <label
             htmlFor="exampleFormControlInput1"
@@ -122,7 +122,7 @@ const ProgramacionCirugia = () => {
           </div>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex flex-wrap">
         <div className="mb-3 xl:w-96">
           <label
             htmlFor="exampleFormControlInput1"
@@ -190,7 +190,7 @@ const ProgramacionCirugia = () => {
           </div>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex flex-wrap">
         <div className="mb-3 xl:w-96">
           <label
             htmlFor="exampleFormControlInput1"
@@ -288,7 +288,7 @@ const ProgramacionCirugia = () => {
           </div>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex flex-wrap">
         <div className="mb-3 xl:w-96">
           <label
             htmlFor="exampleFormControlInput1"
@@ -356,58 +356,58 @@ const ProgramacionCirugia = () => {
         </div>
       </div>
       {/* Tabla */}
-      <div className="flex flex-col">
-        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div className="flex flex-col ">
+        <div className="overflow-x-auto ">
+          <div className="py-4 inline-block min-w-full">
             <div className="overflow-hidden">
               <table className="min-w-full text-center">
-                <thead className="border-b bg-gray-200">
+                <thead className=" bg-gray-200">
                   <tr>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       Estado
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       N° Cirugía
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       Fecha
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       Id paciente
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       Tipo de documento
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       Nombre paciente
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       Procedimiento
                     </th>
                     <th
                       scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                      className="text-sm font-medium text-gray-900  py-2"
                     >
                       Especialista
                     </th>
@@ -422,20 +422,8 @@ const ProgramacionCirugia = () => {
                       <div className="pt-2">
                         <div className="mb-3 xl:w-96">
                           <select
-                            className="form-select 
-                          block
-                          w-full
-                          px-3
-                          py-1.5
-                          text-base
-                          font-medium
-                          text-gray-700
-                          bg-white bg-clip-padding bg-no-repeat
-                          border border-solid border-gray-300
-                          rounded
-                          transition
-                          ease-in-out
-                          m-0
+                            className="form-select block w-full px-3 py-1.5 text-base font-medium text-gray-700 bg-white bg-clip-padding bg-no-repeat
+                          border border-solid border-gray-300 rounded transition ease-in-out m-0
                           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             aria-label="Default select example"
                           >
@@ -447,13 +435,27 @@ const ProgramacionCirugia = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">63045</td>
-                    <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">29/07/2022</td>
-                    <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">1002752067</td>
-                    <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">CC</td>
-                    <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">LUISA MARIA SALAZAR CARDONA</td>
-                    <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">APENDICECTOMIA VIA ABIERTA</td>
-                    <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap"></td>
+                    <td className="text-sm text-gray-900 font-medium px-3 py-4 whitespace-nowrap">
+                      63045
+                    </td>
+                    <td className="text-sm text-gray-900 font-medium px-3 py-4 whitespace-nowrap">
+                      29/07/2022
+                    </td>
+                    <td className="text-sm text-gray-900 font-medium px-3 py-4 whitespace-nowrap">
+                      1002752067
+                    </td>
+                    <td className="text-sm text-gray-900 font-medium px-3 py-4 whitespace-nowrap">
+                      CC
+                    </td>
+                    <td className="text-sm text-gray-900 font-medium px-3 py-4 whitespace-nowrap">
+                      LUISA MARIA SALAZAR CARDONA
+                    </td>
+                    <td className="text-sm text-gray-900 font-medium px-3 py-4 whitespace-nowrap">
+                      APENDICECTOMIA VIA ABIERTA
+                    </td>
+                    <td className="text-sm text-gray-900 font-medium px-3 py-4 whitespace-nowrap">
+                      APENDICECTOMIA VIA ABIERTA
+                    </td>
                     {/* <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap text-center"> */}
                     {/* <div className="flex items-center mr-4"> */}
                     {/* <input
@@ -468,6 +470,64 @@ const ProgramacionCirugia = () => {
               </table>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex pt-5 flex-wrap">
+        <div className="px-3">
+          <button
+            type="button"
+            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Programación
+          </button>
+        </div>
+        <div className="px-3">
+          <button
+            type="button"
+            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Modificar
+          </button>
+        </div>
+        <div className="px-3">
+          <button
+            type="button"
+            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Imprimir Programación
+          </button>
+        </div>
+        <div className="px-3">
+          <button
+            type="button"
+            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Agregar Paq. Qx.
+          </button>
+        </div>
+        <div className="px-3">
+          <button
+            type="button"
+            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Agregar Paq. Qx.
+          </button>
+        </div>
+        <div className="px-3">
+          <button
+            type="button"
+            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Turnos
+          </button>
+        </div>
+        <div className="px-3">
+          <button
+            type="button"
+            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Desactivar Ind. Uso
+          </button>
         </div>
       </div>
     </div>

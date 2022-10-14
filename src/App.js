@@ -1,7 +1,10 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import EstadosPacientes from './components/EstadosPacientes';
+import Modal from './components/Modal';
 import ModalSalida from './components/ModalSalida';
+import BucarPacienteProgramacionCirugia from './pages/BucarPacienteProgramacionCirugia';
 import BuscarPacienteParaQX from './pages/BuscarPacienteParaQX';
 import CambioEstado from './pages/CambioEstado';
 import Cirugia from './pages/Cirugia';
@@ -22,6 +25,9 @@ function App() {
         <Route path='/cirugia' element={<Cirugia/>}/>
         <Route path='/salida' element={<ModalSalida/>}/>
         <Route path='/programacioncirugia' element={<ProgramacionCirugia/>}/>
+        <Route path='/estadospacientes' element={<EstadosPacientes/>}/>
+        {/* <Route path='/modal' element={<Modal/>}/> */}
+        <Route path='/buscarpacienteprogramacioncirugia' element={<BucarPacienteProgramacionCirugia/>}/>
       </Routes>
     </BrowserRouter>
   );
