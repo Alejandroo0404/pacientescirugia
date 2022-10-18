@@ -1,16 +1,20 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import Cirugia from '../pages/Cirugia';
+import Modal from "./Modal";
 
-const TablaProgramacionCirugia = () => {
-    const [userDate, setUserDate] = useState([])
-    const [cirugiaP, setCirugiaP] = useState(true)
-
-    const cirugiaPaciente = ()=>{
-        if(cirugiaP){
-          setCirugiaP(false)
-        }else if(!cirugiaP){
-          setCirugiaP(true)
-        }
+const TablaProgramacionCirugia = (props) => {
+    const [modalOn, setModalOn] = useState(false);
+    const [choice, setChoice] = useState(false)
+    const [cirugiaPaciente, setCirugiaPaciente] = useState(false)
+    console.log(props.user)
+    const modificar = ()=>{
+        // if(cirugiaPaciente){
+        //   setCirugiaPaciente(false)
+        // }else if(!cirugiaPaciente){
+        //   setCirugiaPaciente(true)
+        // }
+        setModalOn(true)
       }
 
     const handleState = async (e) =>{
@@ -28,10 +32,10 @@ const TablaProgramacionCirugia = () => {
         }
         
         const body = {
-          Id_cirugia: userDate[0].ProCirCod,
-          cedula_paciente: userDate[0].HISCKEY,
-          nombre_cirujano: userDate[0].MPNOMC,
-          nombre_paciente: userDate[0].MPNOMC,
+          Id_cirugia: props.user.ProCirCod,
+          cedula_paciente: props.user.HISCKEY,
+          nombre_cirujano: props.user.MPNOMC,
+          nombre_paciente: props.user.MPNOMC,
           estado_paciente: e.target.value,
           fecha_cambio_estado: `${fecha.getFullYear()}-${mes}-${dia}`,
           hora_cambio_estado: `${fecha.getHours()}:${fecha.getMinutes()}`,
@@ -40,27 +44,15 @@ const TablaProgramacionCirugia = () => {
       }
   return (
     
-        <tbody>
+        <>
          
         <tr className="bg-white border-b">
           <td>
-            <div className="pt-2">
+            <div className="pt-2 w-40">
               <div className="mb-3 xl:w-96">
-                <select onChange={handleState} className="form-select 
-                  block
-                  w-full
-                  px-3
-                  py-1.5
-                  text-base
-                  font-medium
-                  text-gray-700
-                  bg-white bg-clip-padding bg-no-repeat
-                  border border-solid border-gray-300
-                  rounded
-                  transition
-                  ease-in-out
-                  m-0
-                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                <select onChange={handleState} className="form-select block w-40 px-3 py-1.5 text-base font-medium text-gray-700 bg-white bg-clip-padding bg-no-repeat
+                  border border-solid border-gray-300 rounded transition  ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+                  aria-label="Default select example">
                     <option value="pendiente">Pendiente</option>
                     <option value="reservado">Reservado</option>
                     <option value="confirmado">Confirmado</option>
@@ -73,25 +65,25 @@ const TablaProgramacionCirugia = () => {
               </div>
             </div>
           </td>
-          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-            {/* {userDate[0].ProCirCod} */}
+          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
+            {props.user.ProCirCod}
           </td>
-          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-            {/* {userDate[0].HISCKEY } */}
+          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
+            {props.user.HISCKEY }
           </td>
-          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-            {/* {userDate[0].MPNOMC } */}
+          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
+            {props.user.MPNOMC }
           </td>
-          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-            {/* {userDate[0].HCFcHrOrd } */}
+          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
+            {props.user.HCFcHrOrd }
           </td>
-          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-            {/* {userDate[0]["PrNomb "] } */}
+          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
+            {props.user["PrNomb "] }
           </td>
-          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+          <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
             <div className="">
                     <button
-                      onClick={cirugiaPaciente}
+                      onClick={modificar}
                       type="button"
                       className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     >
@@ -100,8 +92,22 @@ const TablaProgramacionCirugia = () => {
             </div>
           </td>
         </tr><tr className="bg-white border-b p-5"></tr>
-      
-      </tbody>
+        
+        {/*{cirugiaPaciente? 
+       <div>
+        <Cirugia userDate={props.user}/>
+        <div className="p-10">
+                                <button
+                                  onClick={modificar}
+                                  type="button"
+                                  className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                                >
+                                  Cancelar
+                                </button>
+                        </div>
+      </div>: <div></div>} */}
+      {modalOn && < Modal setModalOn={setModalOn} setChoice={setChoice} user={props.user}/>}
+      </>
   )
 }
 

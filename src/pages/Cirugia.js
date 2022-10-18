@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 const Cirugia = (props) => {
-  const [hola, setHola] = useState('hola')
-  let hh = ""
-  console.log(props.userDate[0].MPCedu, "holaa")
+  //const [hola, setHola] = useState('hola')
+  //let hh = ""
+  // console.log(props.userDate[0].MPCedu, "holaa")
+  //console.log(props.userDate.MPCedu, "holaa")
   //setHola('holaa')
   return (
     <div className=" py-10">
@@ -91,7 +92,8 @@ const Cirugia = (props) => {
           <div className="flex">
             <input
               //   onChange={searchUserId}
-              defaultValue={props.userDate[0].ProEmpCod}
+               defaultValue={props.userDate[0].ProEmpCod}
+              //defaultValue={props.userDate.ProEmpCod}
               type="text"
               className="
         form-control
@@ -127,6 +129,7 @@ const Cirugia = (props) => {
             <input
               //   onChange={searchUserId}
               defaultValue={props.userDate[0]["ProCirCod "]}
+              //defaultValue={props.userDate["ProCirCod "]}
               type="number"
               className="
         form-control
@@ -162,6 +165,7 @@ const Cirugia = (props) => {
             <input
               //   onChange={searchUserId}
               defaultValue={props.userDate[0].ProCirCod}
+              //defaultValue={props.userDate.ProCirCod}
               type="text"
               className="
         form-control
@@ -267,7 +271,8 @@ const Cirugia = (props) => {
           <div className="flex">
             <input
               //   onChange={searchUserId}
-              defaultValue={props.userDate[0].ProCons}
+               defaultValue={props.userDate[0].ProCons}
+             // defaultValue={props.userDate.ProCons}
               type="text"
               className="
         form-control
@@ -735,6 +740,7 @@ const Cirugia = (props) => {
             <input
               //   onChange={searchUserId}
               defaultValue={props.userDate[0].HISCKEY}
+              //defaultValue={props.userDate.HISCKEY}
               type="text"
               className="
         form-control
@@ -770,6 +776,7 @@ const Cirugia = (props) => {
             <input
             defaultValue={props.userDate[0].MPTDoc}
               //   onChange={searchUserId}
+              //defaultValue={props.userDate.MPTDoc}
               type="text"
               className="
         form-control
@@ -867,7 +874,7 @@ const Cirugia = (props) => {
           <div className="flex">
             <input
               //   onChange={searchUserId}
-              
+              //defaultValue={props.userDate.MPNOMC}
               defaultValue={props.userDate[0].MPNOMC}
               type="text"
               className="
@@ -1308,6 +1315,7 @@ const Cirugia = (props) => {
             <input
               //   onChange={searchUserId}
               defaultValue={props.userDate[0].ProEPS}
+              //defaultValue={props.userDate.ProEPS}
               type="text"
               className="
         form-control

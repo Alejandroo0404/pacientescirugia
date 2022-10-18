@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import EstadosPacientes from './components/EstadosPacientes';
 import Modal from './components/Modal';
+import ModalCirugia from './components/ModalCirugia';
 import ModalSalida from './components/ModalSalida';
 import BucarPacienteProgramacionCirugia from './pages/BucarPacienteProgramacionCirugia';
 import BuscarPacienteParaQX from './pages/BuscarPacienteParaQX';
@@ -28,6 +29,8 @@ function App() {
         <Route path='/estadospacientes' element={<EstadosPacientes/>}/>
         {/* <Route path='/modal' element={<Modal/>}/> */}
         <Route path='/buscarpacienteprogramacioncirugia' element={<BucarPacienteProgramacionCirugia/>}/>
+        <Route path='/modal' element={<ModalSalida/>}/>
+        <Route path='/modalcirugia' element={<ModalCirugia/>}/>
       </Routes>
     </BrowserRouter>
   );
