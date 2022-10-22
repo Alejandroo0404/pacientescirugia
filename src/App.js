@@ -4,6 +4,12 @@ import './App.css';
 import EstadosPacientes from './components/EstadosPacientes';
 import Modal from './components/Modal';
 import ModalCirugia from './components/ModalCirugia';
+import ModalCirugiaPalabraClave from './components/ModalCirugiaPalabraClave';
+import ModalCirugiaQuirofano from './components/ModalCirugiaQuirofano';
+import ModalCirugiaReservadoPor from './components/ModalCirugiaReservadoPor';
+import ModalCirujanoCargo from './components/ModalCirujanoCargo';
+import ModalEntidadAseguradora from './components/ModalEntidadAseguradora';
+import ModalHemoderivados from './components/ModalHemoderivados';
 import ModalSalida from './components/ModalSalida';
 import BucarPacienteProgramacionCirugia from './pages/BucarPacienteProgramacionCirugia';
 import BuscarPacienteParaQX from './pages/BuscarPacienteParaQX';
@@ -29,8 +35,14 @@ function App() {
         <Route path='/estadospacientes' element={<EstadosPacientes/>}/>
         {/* <Route path='/modal' element={<Modal/>}/> */}
         <Route path='/buscarpacienteprogramacioncirugia' element={<BucarPacienteProgramacionCirugia/>}/>
-        <Route path='/modal' element={<ModalSalida/>}/>
+        {/* <Route path='/modal' element={<ModalSalida/>}/> */}
         <Route path='/modalcirugia' element={<ModalCirugia/>}/>
+        {/* <Route path='/modalcirujanocargo' element={<ModalCirujanoCargo/>}/> */}
+        {/* <Route path='/modalcirugiaquirofano' element={<ModalCirugiaQuirofano/>}/> */}
+        {/* <Route path='/modalreservadopor' element={<ModalCirugiaReservadoPor/>}/> */}
+        {/* <Route path='/modalentidadaseguradora' element={<ModalEntidadAseguradora/>}/> */}
+        {/* <Route path='/modalpalabraclave' element={<ModalCirugiaPalabraClave/>}/> */}
+        <Route path='/modalhemoderivados' element={<ModalHemoderivados/>}/>
       </Routes>
     </BrowserRouter>
   );

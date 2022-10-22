@@ -446,7 +446,7 @@ const Modal = ({ setModalOn, setChoice, user }) => {
                             </div>
                             
                         </div>
-                        {/* <div className="flex py-2 text-left">
+                        <div className="flex py-2 text-left">
                             <div className="w-1/3  px-4">
                                 <label  className="form-label inline-block mb-2 text-gray-900 font-medium" >
                                     Lateralidad
@@ -478,8 +478,8 @@ const Modal = ({ setModalOn, setChoice, user }) => {
                                     <option value="3">Epidural</option>
                                 </select>
                             </div>                          
-                        </div> */}
-                        {/* <div className="flex py-2 text-left">
+                        </div>
+                        <div className="flex py-2 text-left">
                             <div className="w-1/2  px-4">
                                 <label  className="form-label inline-block mb-2 text-gray-900 font-medium" >
                                     Estado del Paciente
@@ -521,7 +521,7 @@ const Modal = ({ setModalOn, setChoice, user }) => {
                                     />
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                         
                     {/* <div>
                             <label  className="form-label inline-block mb-2 text-gray-900 font-medium" >

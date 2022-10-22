@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Api from "../components/Api";
+//import Api from "../components/Api";
 import "./PacientesCirugias.css";
 
 const PacientesCirugias = () => {
@@ -12,7 +12,7 @@ const PacientesCirugias = () => {
   //http://192.241.142.26:81/api/pacientescirugiafecha
   let nuevo;
   let apiUsers = async () =>{
-    axios.get("http://127.0.0.1:8000/api/movimiento").then((response)=>{        
+    axios.get("http://127.0.0.1:8000/api/consulta/estado").then((response)=>{        
         
 
         nuevo = response.data

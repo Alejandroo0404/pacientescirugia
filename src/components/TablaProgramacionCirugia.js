@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import Cirugia from '../pages/Cirugia';
-import Modal from "./Modal";
+//import Cirugia from '../pages/Cirugia';
+//import Modal from "./Modal";
+import ModalCirugia from './ModalCirugia';
 
 const TablaProgramacionCirugia = (props) => {
     const [modalOn, setModalOn] = useState(false);
@@ -32,7 +33,7 @@ const TablaProgramacionCirugia = (props) => {
         }
         
         const body = {
-          Id_cirugia: props.user.ProCirCod,
+          Id_cirugia: props.user["ProCirCod "],
           cedula_paciente: props.user.HISCKEY,
           nombre_cirujano: props.user.MPNOMC,
           nombre_paciente: props.user.MPNOMC,
@@ -40,7 +41,7 @@ const TablaProgramacionCirugia = (props) => {
           fecha_cambio_estado: `${fecha.getFullYear()}-${mes}-${dia}`,
           hora_cambio_estado: `${fecha.getHours()}:${fecha.getMinutes()}`,
         };
-        await axios.post("http://127.0.0.1:8000/api/cambioes", body); 
+        await axios.post("http://127.0.0.1:8000/api/agregar/paciente", body); 
       }
   return (
     
@@ -66,7 +67,7 @@ const TablaProgramacionCirugia = (props) => {
             </div>
           </td>
           <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
-            {props.user.ProCirCod}
+            {props.user["ProCirCod "]}
           </td>
           <td className="text-xs text-gray-900 font-medium px-6 py-4 whitespace-pre-wrap">
             {props.user.HISCKEY }
@@ -106,7 +107,8 @@ const TablaProgramacionCirugia = (props) => {
                                 </button>
                         </div>
       </div>: <div></div>} */}
-      {modalOn && < Modal setModalOn={setModalOn} setChoice={setChoice} user={props.user}/>}
+      {/* {modalOn && < Modal setModalOn={setModalOn} setChoice={setChoice} user={props.user}/>} */}
+      {modalOn && < ModalCirugia setModalOn={setModalOn} setChoice={setChoice} user={props.user}/>} 
       </>
   )
 }
